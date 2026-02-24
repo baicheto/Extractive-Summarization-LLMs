@@ -69,7 +69,7 @@ While ROUGE is less indicative of extractive accuracy per se, it can offer compl
 
 
 #### Models
-To carry out our experiments, we will employ modern open-weight LLMs with strong capabilities in reasoning and instruction following, easy to run in Colab. Specifically:
+To carry out the experiments, modern open-weight LLMs will be employed with strong capabilities in reasoning and instruction following, easy to run in Colab. Specifically:
 **LLaMA 3.2 (3B)**: A balanced and widely adopted open model, suitable for general-purpose prompting.
 **Qwen 3 (4B)**: A reasoning-oriented model, particularly effective for multi-step and structured prompting strategies.
 **Qwen 2.5 (3B)**: A reasoning-oriented model.
@@ -79,7 +79,7 @@ To carry out our experiments, we will employ modern open-weight LLMs with strong
 Here the focus changes from benchmarking to **Dataset Construction**. 
 
 #### Inspired By 
-Our work is primarily inspired by the paper [DYLE: Dynamic Latent Extraction for Abstractive Long-Input Summarization](https://aclanthology.org/2022.acl-long.118/) published in [NAACL24](https://2024.naacl.org/).
+This work is primarily inspired by the paper [DYLE: Dynamic Latent Extraction for Abstractive Long-Input Summarization](https://aclanthology.org/2022.acl-long.118/) published in [NAACL24](https://2024.naacl.org/).
 The authors explore four heuristics, falling into two categories. Both categories involve determining candidate extractive elements and ranking them, but the key difference lies in whether the candidate is an entire extractive summary (i.e., a set of sentences from the source document) or a single sentence from the source.
  
 1. **Summary-level**:<br>
@@ -93,7 +93,7 @@ The authors explore four heuristics, falling into two categories. Both categorie
 In both categories, the final extractive summary is constructed by selecting the top-K ranked sentences. K is determined via grid search in the range [1, 32].
 
 #### Objectives
-Since there is a lack of Datasets for extractive summarization, but we have tons of abstractive summarization datasets, we focus on try to **transform abstractive summaries into their respective extractive verison**. 
+Since there is a lack of Datasets for extractive summarization, but we have tons of abstractive summarization datasets, this project focuses on trying to **transform abstractive summaries into their respective extractive verison**. 
 The four heuristics described above have been implemented in order to predict the extractive summaries starting from the abstractive version, their results have then been analysed. 
 
 #### Used Data
